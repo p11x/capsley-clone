@@ -195,5 +195,48 @@ document.addEventListener('DOMContentLoaded', () => {
   // Show first slide initially
   showSlide(0);
 
-  // Sticky CTA - already handled via CSS media query
+  // Navbar scrolled state
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar')
+      .classList.toggle('navbar--scrolled', window.scrollY > 20);
+  });
+
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+  }
+
+  // Active nav link on scroll (IntersectionObserver)
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navbar__link');
+  const sidebarItems = document.querySelectorAll('.sidebar__item[href]');
+  
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        sidebarItems.forEach(i => i.classList.remove('active'));
+        const active = document.querySelector(`.navbar__link[href="#${entry.target.id}"]`);
+        const activeSide = document.querySelector(`.sidebar__item[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+        if (activeSide) activeSide.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+  
+  sections.forEach(s => navObserver.observe(s));
+
+  // Back to top button
+  const toTop = document.getElementById('toTop');
+  if (toTop) {
+    window.addEventListener('scroll', () => {
+      toTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
 });

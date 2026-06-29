@@ -11,8 +11,106 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- STICKY TOP NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <a href="#home" class="navbar__logo">
+        <img src="https://lp.capsley.net/wp-content/uploads/2024/08/CAPSLEY-LOGO-blue.png"
+             alt="Capsley" height="36">
+        <span class="navbar__brand">Capsley</span>
+      </a>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#home" class="navbar__link active">Home</a></li>
+        <li><a href="#services" class="navbar__link">Services</a></li>
+        <li><a href="#portfolio" class="navbar__link">Portfolio</a></li>
+        <li><a href="#about" class="navbar__link">About</a></li>
+        <li><a href="#testimonials" class="navbar__link">Testimonials</a></li>
+        <li><a href="#contact" class="navbar__link">Contact</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="tel:9591624625" class="navbar__phone">
+          <i class="fa-solid fa-phone"></i> +91 95916 24625
+        </a>
+        <a href="#home" class="navbar__cta">Book Free Consult</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="navbar__mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- STICKY LEFT SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__inner">
+      <nav class="sidebar__nav">
+        <a href="#home" class="sidebar__item" data-tooltip="Home">
+          <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="#clients" class="sidebar__item" data-tooltip="Our Clients">
+          <i class="fa-solid fa-handshake"></i>
+        </a>
+        <a href="#industries" class="sidebar__item" data-tooltip="Industries">
+          <i class="fa-solid fa-industry"></i>
+        </a>
+        <a href="#about" class="sidebar__item" data-tooltip="About Us">
+          <i class="fa-solid fa-building"></i>
+        </a>
+        <a href="#portfolio" class="sidebar__item" data-tooltip="Portfolio">
+          <i class="fa-solid fa-briefcase"></i>
+        </a>
+        <a href="#services" class="sidebar__item" data-tooltip="Services">
+          <i class="fa-solid fa-layer-group"></i>
+        </a>
+        <a href="#why-us" class="sidebar__item" data-tooltip="Why Us">
+          <i class="fa-solid fa-star"></i>
+        </a>
+        <a href="#testimonials" class="sidebar__item" data-tooltip="Testimonials">
+          <i class="fa-solid fa-quote-left"></i>
+        </a>
+        <a href="#contact" class="sidebar__item" data-tooltip="Contact">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </nav>
+
+      <div class="sidebar__divider"></div>
+
+      <div class="sidebar__social">
+        <a href="tel:9591624625" class="sidebar__item" data-tooltip="Call Us">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="#" class="sidebar__item" data-tooltip="WhatsApp" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#" class="sidebar__item" data-tooltip="Instagram" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
+      <button class="sidebar__totop" id="toTop" data-tooltip="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main-content">
+
   <!-- SECTION 1 — HERO -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero__bg-decor">
       <div class="hero__blob hero__blob--1"></div>
       <div class="hero__blob hero__blob--2"></div>
@@ -23,7 +121,7 @@
         <span class="hero__badge">Flat 50% Discount</span>
         <h1 class="hero__title">Get Professional Website For Your Business Today !</h1>
         <p class="hero__subtitle">Transform your business with a stunning, professional website that drives results. Our expert team crafts custom websites tailored to your unique needs and goals.</p>
-        <a href="#footer-form" class="btn btn--primary hero__cta">Book a Free Consultation</a>
+        <a href="#contact" class="btn btn--primary hero__cta">Book a Free Consultation</a>
       </div>
       <div class="hero__right">
         <div class="hero__form-card">
@@ -58,7 +156,7 @@
   </section>
 
   <!-- SECTION 2 — CLIENT LOGOS MARQUEE -->
-  <section class="clients">
+  <section class="clients" id="clients">
     <h2 class="section__heading">Our Recent Clients</h2>
     <div class="clients__marquee">
       <div class="clients__track">
@@ -87,54 +185,70 @@
   </section>
 
   <!-- SECTION 3 — INDUSTRIES WE WORK FOR -->
-  <section class="industries">
+  <section class="industries" id="industries">
     <h2 class="section__heading section__heading--bold">Industries We Work For</h2>
     <div class="industries__grid">
       <div class="card card--industry" data-delay="0">
         <div class="card__icon-wrapper">
-          <img src="https://lp.capsley.net/wp-content/uploads/2024/03/wired-flat-139-basket-2.gif" alt="E-Commerce" class="card__icon card__icon--gif">
+          <div class="icon-wrap">
+            <img src="https://lp.capsley.net/wp-content/uploads/2024/03/wired-flat-139-basket-2.gif" alt="E-Commerce" class="card__icon card__icon--gif">
+          </div>
         </div>
         <h3 class="card__label">E-Commerce</h3>
       </div>
       <div class="card card--industry" data-delay="0.1">
         <div class="card__icon-wrapper">
-          <img src="https://lp.capsley.net/wp-content/uploads/2024/03/wired-flat-567-french-fries-chips.gif" alt="Restaurant" class="card__icon card__icon--gif">
+          <div class="icon-wrap">
+            <img src="https://lp.capsley.net/wp-content/uploads/2024/03/wired-flat-567-french-fries-chips.gif" alt="Restaurant" class="card__icon card__icon--gif">
+          </div>
         </div>
         <h3 class="card__label">Restaurant</h3>
       </div>
       <div class="card card--industry" data-delay="0.2">
         <div class="card__icon-wrapper">
-          <div class="card__icon card__icon--svg"><span class="emoji-icon">📚</span></div>
+          <div class="icon-wrap">
+            <div class="card__icon card__icon--svg"><span class="emoji-icon">📚</span></div>
+          </div>
         </div>
         <h3 class="card__label">Education</h3>
       </div>
       <div class="card card--industry" data-delay="0.3">
         <div class="card__icon-wrapper">
-          <div class="card__icon card__icon--svg"><span class="emoji-icon">🏠</span></div>
+          <div class="icon-wrap">
+            <div class="card__icon card__icon--svg"><span class="emoji-icon">🏠</span></div>
+          </div>
         </div>
         <h3 class="card__label">Real Estate</h3>
       </div>
       <div class="card card--industry" data-delay="0.4">
         <div class="card__icon-wrapper">
-          <i class="fas fa-plane card__icon-fa"></i>
+          <div class="icon-wrap">
+            <i class="fa-solid fa-plane card__icon-fa"></i>
+          </div>
         </div>
         <h3 class="card__label">Tourism</h3>
       </div>
       <div class="card card--industry" data-delay="0.5">
         <div class="card__icon-wrapper">
-          <i class="fas fa-heartbeat card__icon-fa"></i>
+          <div class="icon-wrap">
+            <i class="fa-solid fa-heartbeat card__icon-fa"></i>
+          </div>
         </div>
         <h3 class="card__label">Health Care</h3>
       </div>
       <div class="card card--industry" data-delay="0.6">
         <div class="card__icon-wrapper">
-          <i class="fas fa-spa card__icon-fa"></i>
+          <div class="icon-wrap">
+            <i class="fa-solid fa-spa card__icon-fa"></i>
+          </div>
         </div>
         <h3 class="card__label">Beauty</h3>
       </div>
       <div class="card card--industry" data-delay="0.7">
         <div class="card__icon-wrapper">
-          <i class="fas fa-chart-bar card__icon-fa"></i>
+          <div class="icon-wrap">
+            <i class="fa-solid fa-chart-bar card__icon-fa"></i>
+          </div>
         </div>
         <h3 class="card__label">Finance</h3>
       </div>
@@ -142,7 +256,7 @@
   </section>
 
   <!-- SECTION 4 — ABOUT / WHO WE ARE -->
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
       <div class="about__left">
         <div class="about__image-wrapper">
@@ -162,7 +276,7 @@
           <div class="accordion__item">
             <button class="accordion__header" aria-expanded="false" aria-controls="vision-content">
               <span class="accordion__title">Our Vision</span>
-              <i class="fas fa-chevron-down accordion__icon"></i>
+              <i class="fa-solid fa-chevron-down accordion__icon"></i>
             </button>
             <div class="accordion__content" id="vision-content">
               <p class="accordion__text">To empower every business with cutting-edge digital solutions that elevate their online presence and drive sustainable growth in the digital era.</p>
@@ -171,7 +285,7 @@
           <div class="accordion__item">
             <button class="accordion__header" aria-expanded="false" aria-controls="mission-content">
               <span class="accordion__title">Our Mission</span>
-              <i class="fas fa-chevron-down accordion__icon"></i>
+              <i class="fa-solid fa-chevron-down accordion__icon"></i>
             </button>
             <div class="accordion__content" id="mission-content">
               <p class="accordion__text">We craft exceptional websites that not only look stunning but deliver measurable results. Our mission is to transform your digital vision into reality through innovative design and technology.</p>
@@ -179,13 +293,13 @@
           </div>
         </div>
         <img src="https://lp.capsley.net/wp-content/uploads/elementor/thumbs/arrow_2-qkuxobs07y22cp896a3l0ya148ne6o7cfm53kveeio.png" alt="Arrow decoration" class="about__arrow">
-        <a href="#footer-form" class="btn btn--primary">Schedule a Free Consultation</a>
+        <a href="#contact" class="btn btn--primary">Schedule a Free Consultation</a>
       </div>
     </div>
   </section>
 
   <!-- SECTION 5 — PORTFOLIO -->
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <h2 class="section__heading section__heading--bold">We Always Deliver More Than Expected</h2>
     <div class="portfolio__grid">
       <div class="card card--portfolio" data-delay="0">
@@ -262,34 +376,34 @@
   </section>
 
   <!-- SECTION 6 — FEATURED SERVICES -->
-  <section class="services">
+  <section class="services" id="services">
     <span class="services__label">Featured Services</span>
     <h2 class="services__title">You've got a business, we have got brilliant minds</h2>
     <div class="services__grid">
       <div class="card card--service" data-delay="0">
         <div class="card__icon-wrapper">
-          <i class="fas fa-laptop-code card__icon-fa"></i>
+          <i class="fa-solid fa-laptop-code card__icon-fa"></i>
         </div>
         <h3 class="card__title">New Website Development</h3>
         <p class="card__text">Create stunning, responsive websites from scratch tailored to your business needs and goals.</p>
       </div>
       <div class="card card--service" data-delay="0.1">
         <div class="card__icon-wrapper">
-          <i class="fas fa-sync-alt card__icon-fa"></i>
+          <i class="fa-solid fa-sync-alt card__icon-fa"></i>
         </div>
         <h3 class="card__title">Website Revamp</h3>
         <p class="card__text">Modernize your existing website with fresh design and improved functionality.</p>
       </div>
       <div class="card card--service" data-delay="0.2">
         <div class="card__icon-wrapper">
-          <i class="fas fa-tools card__icon-fa"></i>
+          <i class="fa-solid fa-tools card__icon-fa"></i>
         </div>
         <h3 class="card__title">Website Maintenance</h3>
         <p class="card__text">Keep your website secure, updated, and running smoothly with our maintenance plans.</p>
       </div>
       <div class="card card--service" data-delay="0.3">
         <div class="card__icon-wrapper">
-          <i class="fas fa-shopping-cart card__icon-fa"></i>
+          <i class="fa-solid fa-shopping-cart card__icon-fa"></i>
         </div>
         <h3 class="card__title">E-commerce Solutions</h3>
         <p class="card__text">Build powerful online stores with seamless shopping experiences and secure payments.</p>
@@ -298,7 +412,7 @@
   </section>
 
   <!-- SECTION 7 — STATS / DARK CTA BANNER -->
-  <section class="stats">
+  <section class="stats" id="stats">
     <div class="stats__content">
       <div class="stats__text">
         <h2 class="stats__heading">Your Search For Website Development Ends Here</h2>
@@ -322,13 +436,13 @@
   </section>
 
   <!-- SECTION 8 — WHY CHOOSE US -->
-  <section class="choose">
+  <section class="choose" id="why-us">
     <div class="container">
       <div class="choose__left">
         <div class="choose__image-wrapper">
           <img src="https://lp.capsley.net/wp-content/uploads/2024/03/Capsley-Website-Development-1024x1024.png" alt="Website Development" class="choose__image">
           <div class="choose__badge">Good Business Need A Great Website!</div>
-          <a href="#footer-form" class="btn btn--primary">Book a Free Consultation</a>
+          <a href="#contact" class="btn btn--primary">Book a Free Consultation</a>
           <img src="https://lp.capsley.net/wp-content/uploads/elementor/thumbs/arrow_2-qkuxobs07y22cp896a3l0ya148ne6o7cfm53kveeio.png" alt="Arrow decoration" class="choose__arrow">
         </div>
       </div>
@@ -337,48 +451,48 @@
         <div class="choose__features">
           <div class="feature" data-delay="0">
             <div class="feature__icon-wrapper">
-              <i class="fas fa-paint-brush feature__icon-fa"></i>
-            </div>
-            <div class="feature__text">
-              <h3 class="feature__title">Unique Design</h3>
-              <p class="feature__desc">Custom designs that reflect your brand identity and stand out from competitors.</p>
-            </div>
-          </div>
-          <div class="feature" data-delay="0.1">
-            <div class="feature__icon-wrapper">
-              <i class="fas fa-search feature__icon-fa"></i>
-            </div>
-            <div class="feature__text">
-              <h3 class="feature__title">SEO Optimized</h3>
-              <p class="feature__desc">Built-in SEO best practices to help you rank higher in search results.</p>
-            </div>
-          </div>
-          <div class="feature" data-delay="0.2">
-            <div class="feature__icon-wrapper">
-              <i class="fas fa-mobile-alt feature__icon-fa"></i>
-            </div>
-            <div class="feature__text">
-              <h3 class="feature__title">Mobile Responsive</h3>
-              <p class="feature__desc">Flawless performance across all devices and screen sizes.</p>
-            </div>
-          </div>
+<i class="fa-solid fa-paint-brush feature__icon-fa"></i>
+        </div>
+        <div class="feature__text">
+          <h3 class="feature__title">Unique Design</h3>
+          <p class="feature__desc">Custom designs that reflect your brand identity and stand out from competitors.</p>
+        </div>
+      </div>
+      <div class="feature" data-delay="0.1">
+        <div class="feature__icon-wrapper">
+          <i class="fa-solid fa-search feature__icon-fa"></i>
+        </div>
+        <div class="feature__text">
+          <h3 class="feature__title">SEO Optimized</h3>
+          <p class="feature__desc">Built-in SEO best practices to help you rank higher in search results.</p>
+        </div>
+      </div>
+      <div class="feature" data-delay="0.2">
+        <div class="feature__icon-wrapper">
+          <i class="fa-solid fa-mobile-alt feature__icon-fa"></i>
+        </div>
+        <div class="feature__text">
+          <h3 class="feature__title">Mobile Responsive</h3>
+          <p class="feature__desc">Flawless performance across all devices and screen sizes.</p>
+        </div>
+      </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SECTION 9 — READY TO ELEVATE CTA -->
-  <section class="elevate">
+  <section class="elevate" id="cta">
     <div class="elevate__overlay"></div>
     <div class="elevate__content">
       <h2 class="elevate__heading">Ready to elevate your online presence?</h2>
       <p class="elevate__text">Let our experts help you create a website that truly represents your brand and drives growth.</p>
-      <a href="#footer-form" class="btn btn--primary btn--pulse">Transform Your Digital Future Today!</a>
+      <a href="#contact" class="btn btn--primary btn--pulse">Transform Your Digital Future Today!</a>
     </div>
   </section>
 
 <!-- SECTION 10 — TESTIMONIALS -->
-  <section class="testimonials">
+  <section class="testimonials" id="testimonials">
     <span class="testimonials__label">Testimonial</span>
     <h2 class="testimonials__title">What they say about us</h2>
     <div class="testimonials__container">
@@ -387,28 +501,28 @@
           <div class="testimonial__slide">
             <div class="testimonial__card">
               <div class="testimonial__content">
-                <i class="fas fa-quote-left testimonial__quote"></i>
+                <i class="fa-solid fa-quote-left testimonial__quote"></i>
                 <p class="testimonial__text">Capsley transformed our website beyond expectations! The team understood our vision perfectly and delivered a site that not only looks amazing but has significantly improved our user engagement and conversions.</p>
                 <div class="testimonial__rating">
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
                 </div>
                 <h4 class="testimonial__name">Aarav Kapoor</h4>
               </div>
             </div>
             <div class="testimonial__card">
               <div class="testimonial__content">
-                <i class="fas fa-quote-left testimonial__quote"></i>
+                <i class="fa-solid fa-quote-left testimonial__quote"></i>
                 <p class="testimonial__text">Working with Capsley was a game-changer for our business. Their attention to detail and creative approach helped us launch a website that truly represents our brand values and connects with our audience.</p>
                 <div class="testimonial__rating">
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
                 </div>
                 <h4 class="testimonial__name">Priya Sharma</h4>
                 <p class="testimonial__company">TechNest Innovations</p>
@@ -418,14 +532,14 @@
           <div class="testimonial__slide">
             <div class="testimonial__card">
               <div class="testimonial__content">
-                <i class="fas fa-quote-left testimonial__quote"></i>
+                <i class="fa-solid fa-quote-left testimonial__quote"></i>
                 <p class="testimonial__text">Capsley's mobile-responsive design took our user experience to the next level. We've seen a dramatic increase in mobile traffic and engagement since launching our new site.</p>
                 <div class="testimonial__rating">
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
-                  <i class="fas fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
+                  <i class="fa-solid fa-star testimonial__star"></i>
                 </div>
                 <h4 class="testimonial__name">Siddharth Patel</h4>
                 <p class="testimonial__company">Heritage Threads Boutique</p>
@@ -434,10 +548,10 @@
           </div>
         </div>
         <button class="carousel__nav carousel__nav--prev" aria-label="Previous testimonial">
-          <i class="fas fa-chevron-left"></i>
+          <i class="fa-solid fa-chevron-left"></i>
         </button>
         <button class="carousel__nav carousel__nav--next" aria-label="Next testimonial">
-          <i class="fas fa-chevron-right"></i>
+          <i class="fa-solid fa-chevron-right"></i>
         </button>
         <div class="carousel__dots" id="carousel-dots"></div>
       </div>
@@ -449,7 +563,7 @@
   </section>
 
   <!-- STICKY FOOTER FORM -->
-  <section class="footer-form" id="footer-form">
+  <section class="footer-form" id="contact">
     <div class="container">
       <h2 class="section__heading section__heading--bold">Get In Touch</h2>
       <form id="footer-contact-form" class="form form--horizontal" novalidate>
@@ -479,10 +593,37 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <img src="https://lp.capsley.net/wp-content/uploads/2024/03/CAPSLEY-LOGO-blue-1024x966.png" alt="Capsley" height="32">
+          <p>Creating exceptional digital experiences for businesses worldwide.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <p><i class="fa-solid fa-phone"></i> +91 95916 24625</p>
+          <p><i class="fa-solid fa-envelope"></i> info@capsley.net</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Capsley. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <!-- MOBILE STICKY CTA -->
   <div class="sticky-cta">
     <a href="tel:9591624625" class="sticky-cta__link">
-      <i class="fas fa-phone sticky-cta__icon"></i>
+      <i class="fa-solid fa-phone sticky-cta__icon"></i>
       TALK TO OUR EXPERTS
     </a>
   </div>
@@ -490,11 +631,12 @@
   <!-- TOAST -->
   <div class="toast" id="toast">
     <div class="toast__content">
-      <i class="fas fa-check-circle toast__icon"></i>
+      <i class="fa-solid fa-check-circle toast__icon"></i>
       <span class="toast__message">We'll contact you soon!</span>
     </div>
   </div>
 
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
